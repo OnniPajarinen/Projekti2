@@ -2,16 +2,16 @@ h1 {background-color: bisque;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0px 1px 10px gray;
-    font-size: 7vw;
+    font-size: 50px;
     border-radius: 2px 4px 100px 100px;
 }
 
 h2 {
-    font-size: 4vw;
+    font-size: 25px;
 }
 
 h3 {
-    font-size: 2.5vw;
+    font-size: 17px;
 }
 
 #eka {
@@ -30,24 +30,25 @@ h3 {
 
 #nimet{
     background-color: rgb(226, 255, 225);
-    width: 50vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #okei {
     list-style-type: none;
     text-shadow: 0px 1px 10px gray;
-    font-size: 3vw;
+    font-size: 20px;
 }
 
 li {
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
+    text-align: left;
 }
 
 li:hover {
     background-color: #3498db;
     color: white;
-    padding-left: 1vw;
+    text-align: right;
 }
