@@ -50,18 +50,21 @@ function function1() {
     xmlhttp.onreadystatechange = function () {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           const xmlDoc = xmlhttp.responseXML;
-          const showNodes = xmlDoc.getElementsByTagName("Theatre");
-          const showList = document.getElementById("showList");
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-          for (let i = 0; i < showNodes.length; i++) {
-            const theatreName = showNodes[i].textContent.trim();
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
             if (theatreName === "Omena, Espoo") {
-              const showTime = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
-              const showTimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
-              const showDetails = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
-              const showTitle = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
-              console.log(showTitle)
-              console.log(showTime)
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
             }
           }
         } 
@@ -70,151 +73,181 @@ function function1() {
   
 
 function function2(){
-    var xmlhttp = new XMLHttpRequest();
+    const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
     xmlhttp.send();
 
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-              let theatres = theatre[i].textContent.trim();
-                unique.add(theatres);
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Sello, Espoo") {
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
             }
-
-            unique.forEach((theatre) => {
-                console.log(theatre)
-            });
-        }
-    };
+          }
+        } 
+    }
 }
 
 function function3(){
-    var xmlhttp = new XMLHttpRequest();
+    const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
     xmlhttp.send();
 
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-              let theatres = theatre[i].textContent.trim();
-                unique.add(theatres);
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Itis, Helsinki") {
+              const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+              const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+              const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+              const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+              const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+              console.log(theatreName)
+              console.log(Title)
+              console.log(Sali)
+              console.log(Time)
+              console.log(TimeEnd)
             }
-
-            unique.forEach((theatre) => {
-                console.log(theatre)
-            });
-        }
-    };
+          }
+        } 
+    }
 }
 
 function function4(){
-    var xmlhttp = new XMLHttpRequest();
+    const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
     xmlhttp.send();
 
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-              let theatres = theatre[i].textContent.trim();
-                unique.add(theatres);
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Kinopalatsi, Helsinki") {
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
             }
-
-            unique.forEach((theatre) => {
-                console.log(theatre)
-            });
-        }
-    };
+          }
+        } 
+    }
 }
 
 function function5(){
-    var xmlhttp = new XMLHttpRequest();
+    const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
     xmlhttp.send();
 
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-              let theatres = theatre[i].textContent.trim();
-                unique.add(theatres);
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Maxim, Helsinki") {
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
             }
-
-            unique.forEach((theatre) => {
-                console.log(theatre)
-            });
-        }
-    };
+          }
+        } 
+    }
 }
 
 function function6(){
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
-        xmlhttp.send();
-
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
-
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-            let theatres = theatre[i].textContent.trim();
-            unique.add(theatres);
-            }
-
-            unique.forEach((theatre) => {
-            console.log(theatre)
-            });
-        }
-    };
-}
-
-function function7(){
-    var xmlhttp = new XMLHttpRequest();
+    const xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
     xmlhttp.send();
 
     xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            let xmlDoc = xmlhttp.responseXML;
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
 
-            let theatre = xmlDoc.getElementsByTagName("Theatre");
-            let unique = new Set();
-
-            for (let i = 0; i < theatre.length; i++) {
-              let theatres = theatre[i].textContent.trim();
-                unique.add(theatres);
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Tennispalatsi, Helsinki") {
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
             }
+          }
+        } 
+    }
+}
 
-            unique.forEach((theatre) => {
-                console.log(theatre)
-            });
-        }
-    };
+function function7(){
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("GET", "https://www.finnkino.fi/xml/Schedule/?area=1029&dt=16.12.2024", true);
+    xmlhttp.send();
+
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          const xmlDoc = xmlhttp.responseXML;
+          const Theatre = xmlDoc.getElementsByTagName("Theatre");
+
+          for (let i = 0; i < Theatre.length; i++) {
+            const theatreName = Theatre[i].textContent.trim();
+            if (theatreName === "Flamingo, Vantaa") {
+                const Time = xmlDoc.getElementsByTagName("dttmShowStart")[i].textContent.trim();
+                const TimeEnd = xmlDoc.getElementsByTagName("dttmShowEnd")[i].textContent.trim();
+                const Show = xmlDoc.getElementsByTagName("Show")[i].textContent.trim();
+                const Title = xmlDoc.getElementsByTagName("Title")[i].textContent.trim();
+                const Sali = xmlDoc.getElementsByTagName("TheatreAuditorium")[i].textContent.trim();
+                console.log(theatreName)
+                console.log(Title)
+                console.log(Sali)
+                console.log(Time)
+                console.log(TimeEnd)
+            }
+          }
+        } 
+    }
 }
