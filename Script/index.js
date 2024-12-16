@@ -1,5 +1,5 @@
 function loadAndParseNews() {
-    let feedUrl = "https://cors-anywhere.herokuapp.com/http://www.iltalehti.fi/rss/uutiset.xml";
+    let feedUrl = "https://www.iltalehti.fi/rss/uutiset.xml";
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("GET", feedUrl, true);
