@@ -1,0 +1,53 @@
+h1 {background-color: bisque;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 1px 10px gray;
+    font-size: 7vw;
+    border-radius: 2px 4px 100px 100px;
+}
+
+h2 {
+    font-size: 4vw;
+}
+
+h3 {
+    font-size: 2.5vw;
+}
+
+#eka {
+    background-color: rgb(243, 255, 185);
+    width: max-content;
+    padding: 20px;
+    text-align: center;
+    border-radius: 1cm;
+}
+
+.palikka {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nimet{
+    background-color: rgb(226, 255, 225);
+    width: 50vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+#okei {
+    list-style-type: none;
+    text-shadow: 0px 1px 10px gray;
+    font-size: 3vw;
+}
+
+li {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #3498db;
+    color: white;
+    padding-left: 1vw;
+}
