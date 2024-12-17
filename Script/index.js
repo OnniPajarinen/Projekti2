@@ -8,36 +8,56 @@ const i7 = document.getElementById("t7");
 
 i1.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Omena, Espoossa!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Omena, Espoossa!`
 }
 );
 
 i2.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Sello, Espoossa!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Sello, Espoossa!`
+
 }
 );
 
 i3.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Itis, Helsingissä!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Itis, Helsingissä!`
+
 }
 );
 
 i4.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Kinopalatsi, Helsingissä!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Kinopalatsi, Helsingissä!`
+
 }
 );
 
 i5.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Maxim, Helsingissä!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Maxim, Helsingissä!`
+
 }
 );
 
 i6.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Tennispalatsi, Helsingissä!")
+        document.getElementById("movieList").innerHTML = ""
+        document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Tennispalatsi, Helsingissä!`
+
 }
 );
 
 i7.addEventListener("click", function(){
     alert("Tässä kaikki elokuvamme Flamingo, Vantaalla!")
+    document.getElementById("movieList").innerHTML = ""
+    document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Flamingo, Vantaalla!`
+
 }
 );
 
@@ -70,6 +90,7 @@ console.log(today);
 
 function addMovieToList(theatreName, Title, Sali, RealTime, RealTimeEnd, Pic) {
     const listElement = document.getElementById("movieList");
+    
 
     const listItem = document.createElement("li");
     listItem.innerHTML = `
