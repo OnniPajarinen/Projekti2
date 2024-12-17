@@ -6,6 +6,7 @@ const i5 = document.getElementById("t5");
 const i6 = document.getElementById("t6");
 const i7 = document.getElementById("t7");
 
+// Tässä on tekstien painamiseen reagoivia komentoja, jotka tulostavat tekstin "uusio" kohtaan. Myös poistaa edelliset elokuvat pois tieltä.
 i1.addEventListener("click", function(){
     document.getElementById("movieList").innerHTML = ""
     document.getElementById("uusio").innerHTML = `Tässä kaikki elokuvamme tänään ${today} Omena, Espoossa!`
@@ -54,6 +55,8 @@ i7.addEventListener("click", function(){
 }
 );
 
+// Tässä on tämänhetkinen päivä, jotta sivusto ei mene vanhaksi, koska huomasin, että se uusiutuu päivittäin ja poistaa edelliset tiedot.
+// Se lisätään linkin loppuun.
 function CurrentDate() {
     const today = new Date();
 
@@ -64,6 +67,7 @@ function CurrentDate() {
     return `${day}.${month}.${year}`;
 }
 
+// Tämä muuntaa xml tiedoston kunnolliseksi päivämääräksi ja kellonajaksi.
 function DateTime(dateTimeStr) {
     const dateTime = new Date(dateTimeStr);
 
@@ -77,10 +81,11 @@ function DateTime(dateTimeStr) {
     return `${day}.${month}.${year} klo ${hours}:${minutes}`;
 }
 
+// Tässä tulostan tämänhetkisen päivän konsoliin, jotta se jää sinne kehittäjälle muistiin, että se on oikein.
 var today = CurrentDate();
 console.log(today);
 
-
+// Tämä funktio lisää xml tiedoista elokuvan tiedot listaan käyttäjälle. Se myös lisää kuvan.
 function addMovieToList(theatreName, Title, Sali, RealTime, RealTimeEnd, Pic) {
     const listElement = document.getElementById("movieList");
     
@@ -99,6 +104,8 @@ function addMovieToList(theatreName, Title, Sali, RealTime, RealTimeEnd, Pic) {
     listElement.appendChild(listItem);
 }
 
+// Nämä seuraavat funktiot tekevät tiedonhaun kyseisen teatterin elokuvavalikoimasta täksipäiväksi. Sitten edellinen funktio aktivoidaan ja
+// se tulostaa tiedot käyttäjälle.
 function function1() {
     const xmlhttp = new XMLHttpRequest();
 
